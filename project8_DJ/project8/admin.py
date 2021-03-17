@@ -14,8 +14,9 @@ class ProfileImportExport(ImportExportModelAdmin):
 
 @admin.register(DataSet)
 class DataSetAdmin(admin.ModelAdmin):
-    pass
+    list_display = ("file_name", "date")
 
 @admin.register(DataSource)
 class DataSourceAdmin(admin.ModelAdmin):
     pass
+

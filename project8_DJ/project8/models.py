@@ -23,8 +23,9 @@ class DataSet(models.Model):
     file_name      = models.CharField(max_length=100)
     execution_time = models.FloatField(default=0)
     num_of_records = models.IntegerField(default=0)
-    def __str__(self):
-        return f'{self.file_name} / {self.source}'
+
+    class Meta:
+        ordering = ("date", "file_name")
 
 class Teacher(models.Model):
     NID        = models.BigIntegerField(null=True)
